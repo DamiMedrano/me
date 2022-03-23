@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <HeaderComponent>
       <div className='header'>
-        <Link to='/'>
+        <Link to='/me'>
           <HeaderLogo>
             <h1>dm</h1>
           </HeaderLogo>
