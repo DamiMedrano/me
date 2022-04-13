@@ -6,7 +6,7 @@ import './App.scss';
 //pages
 import Home from './pages/home/Home';
 import Contact from './pages/contact/Contact';
-import Portfolio from './pages/portfolio/Portfolio';
+// import Portfolio from './pages/portfolio/Portfolio';
 import NotFound from './pages/not found/NotFound';
 import Test from './pages/testing/Test';
 
@@ -21,7 +21,7 @@ const App = () => {
           <Routes>
             <Route path='*' element={<NotFound />} />
             <Route path='/me' element={<Home />} />
-            <Route path='/portfolio' element={<Portfolio />} />
+            {/* <Route path='/portfolio' element={<Portfolio />} /> */}
             <Route path='/contact' element={<Contact />} />
             <Route path='/test' element={<Test />} />
           </Routes>
