@@ -6,9 +6,16 @@ import { Outlet } from 'react-router-dom';
 const DropdownMenu = () => {
   const [clicked, setClicked] = useState(false);
 
-  const clickHandler = () => {
+  const clickHandler = (e) => {
+    const menuIcon = document.getElementById('fa-bars');
+
     setClicked(!clicked);
-    document.getElementById('fa-bars').classList.toggle('rotate-right');
+    if (clicked == false) {
+      menuIcon.classList.add('rotate-right');
+    } else {
+      menuIcon.classList.remove('rotate-right');
+    }
+    return;
   };
 
   return (
@@ -24,7 +31,7 @@ const DropdownMenu = () => {
               rel='noreferrer'
               href='https://github.com/DamiMedrano'
             >
-              <ExternalLink>Portfolio</ExternalLink>
+              <ExternalLink>Github</ExternalLink>
             </a>
             <a
               target='_blank'
@@ -33,7 +40,7 @@ const DropdownMenu = () => {
             >
               <ExternalLink>Résumé</ExternalLink>
             </a>
-            {/* <DropdownMenuItem name='Résumé' /> */}
+            {/* <DropdownMenuItem name='Portfolio' /> */}
             {/* <DropdownMenuItem name='Contact' /> */}
           </MenuItems>
           <Outlet />

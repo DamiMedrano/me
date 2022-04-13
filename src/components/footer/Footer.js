@@ -13,17 +13,20 @@ const Footer = () => {
         <FooterItem
           href={linkedInURL}
           name='LinkedIn'
-          faIcon='fab fa-linkedin linkedIn-icon'
+          faIcon='fa-brands fa-linkedin-in'
+          iconContainer='linkedIn-icon'
         />
         <FooterItem
           href={emailContact}
           name='eMail'
-          faIcon='fa fa-envelope-square email-icon'
+          faIcon='fa solid fa-envelope'
+          iconContainer='email-icon'
         />
         <FooterItem
           href={GithubURL}
           name='Github'
-          faIcon='fa-brands fa-github-square github-icon'
+          faIcon='fa-brands fa-github'
+          iconContainer='github-icon'
         />
       </FooterSection>
       <CreditsSection>

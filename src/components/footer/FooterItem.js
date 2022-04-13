@@ -5,7 +5,9 @@ const FooterItem = (props) => {
   return (
     <Item>
       <a href={props.href} target='_blank' rel='noreferrer'>
-        <i class={props.faIcon}></i>
+        <div className={props.iconContainer}>
+          <i class={props.faIcon}></i>
+        </div>
         <p>{props.name}</p>
       </a>
     </Item>
@@ -14,18 +16,21 @@ const FooterItem = (props) => {
 
 export default FooterItem;
 
-const Item = styled.section`
+const Item = styled.div`
   width: 100px;
   a {
     font-size: 20px;
     color: #fafafa;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-decoration: none;
+    cursor: pointer;
+
     i {
-      font-size: 40px;
-      color: #e4e4e4;
+      font-size: 28px;
     }
+
     &:hover {
       .linkedIn-icon {
         color: #0072b1;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../../components/header/Header';
+import { Link } from 'react-router-dom';
 
 const NotFound = () => {
   return (
@@ -14,6 +15,13 @@ const NotFound = () => {
         <NotFoundText>
           <h1>404</h1>
           <p>PAGE NOT FOUND</p>
+          <ButtonContainer>
+            <Link to={'/me/'}>
+              <button className='button-primary large'>
+                Go back to home page
+              </button>
+            </Link>
+          </ButtonContainer>
         </NotFoundText>
       </NotFoundContainer>
     </>
@@ -35,6 +43,10 @@ const NotFoundContainer = styled.div`
     filter: brightness(60%);
     margin: 0 auto;
   }
+`;
+
+const ButtonContainer = styled.div`
+  margin-top: 12px;
 `;
 
 const NotFoundText = styled.div`
